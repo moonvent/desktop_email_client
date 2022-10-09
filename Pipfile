@@ -10,6 +10,8 @@ loguru = "*"
 imap-tools = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+pydantic = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
