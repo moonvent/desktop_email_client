@@ -12,6 +12,7 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 pydantic = "*"
 python-dotenv = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 

@@ -1,12 +1,14 @@
 """
     Для генерации доки нужно прописать такие команды:
     с нуля:
+     - cd docs
      - sphinx-quickstart
      - Добавить modules в index.rst
      - sphinx-apidoc -o . ..
      - make html
     если не с нуля:
      - make html
+    Хорошая дока на русском: https://sphinx-ru.readthedocs.io/ru/latest/sphinx-markup.html
 """
 
 # Configuration file for the Sphinx documentation builder.

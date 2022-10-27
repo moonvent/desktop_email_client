@@ -103,8 +103,42 @@
 но интерфейс вывод на UI будет один</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.mails.getting.getting_object.</span></span><span class="sig-name descname"><span class="pre">MailImapBasicObject</span></span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject" title="Ссылка на это определение"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.mails.getting.getting_object.</span></span><span class="sig-name descname"><span class="pre">MailImapBasicObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject" title="Ссылка на это определение"></a></dt>
 <dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.folders">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">folders</span></span><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.folders" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.get_all_folders_status">
+<span class="sig-name descname"><span class="pre">get_all_folders_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">src.mails.getting.schemes.FolderStatus</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject.get_all_folders_status"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.get_all_folders_status" title="Ссылка на это определение"></a></dt>
+<dd><blockquote>
+<div><p>Получение всех статусов папок, если есть в этом необходимость</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Результат</dt>
+<dd class="field-odd"><p>кортеж с объектами FolderStatus</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.get_folder_status">
+<span class="sig-name descname"><span class="pre">get_folder_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FolderInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FolderStatus</span></span></span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject.get_folder_status"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.get_folder_status" title="Ссылка на это определение"></a></dt>
+<dd><blockquote>
+<div><p>Получение информации о папке</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>folder_name</strong> – название, или объект папки, если None, то возвращаем статус установленной сейчас папки</p>
+</dd>
+<dt class="field-even">Результат</dt>
+<dd class="field-even"><p>Объект FolderStatus, содержащий информацию о кол-ве сообщений и кол-ве непрочитанных сообщений</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.get_folders">
 <span class="sig-name descname"><span class="pre">get_folders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject.get_folders"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.get_folders" title="Ссылка на это определение"></a></dt>
@@ -113,6 +147,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.get_messages">
 <span class="sig-name descname"><span class="pre">get_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/mails/getting/getting_object.html#MailImapBasicObject.get_messages"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.get_messages" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="src.mails.getting.getting_object.MailImapBasicObject.mail">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mail</span></span><a class="headerlink" href="#src.mails.getting.getting_object.MailImapBasicObject.mail" title="Ссылка на это определение"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

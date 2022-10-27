@@ -1,7 +1,7 @@
-src package
+Programm modules
 ===========
 
-Subpackages
+
 -----------
 
 .. toctree::
